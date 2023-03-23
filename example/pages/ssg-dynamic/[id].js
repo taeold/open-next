@@ -16,7 +16,7 @@ export function getStaticProps({ params }) {
   return {
     props: {
       data: posts.find(({ id }) => id === params.id),
-      time: Date.now(),
+      time: (new Date()).toISOString(),
     },
   };
 }
